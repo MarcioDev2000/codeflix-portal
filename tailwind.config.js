@@ -1,5 +1,8 @@
 /** @type {import('tailwindcss').Config} */
-export default {
+import tailwindScrollbarHide from 'tailwind-scrollbar-hide';
+import vidstackReactTailwind from '@vidstack/react/tailwind.cjs';
+
+const config = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx}",
     "./src/components/**/*.{js,ts,jsx,tsx}",
@@ -7,7 +10,9 @@ export default {
   ],
   theme: {},
   plugins: [
-    require('tailwind-scrollbar-hide'),
-    require('@vidstack/react/tailwind.cjs'),
+    tailwindScrollbarHide,
+    vidstackReactTailwind,
   ],
 };
+
+export default config;
