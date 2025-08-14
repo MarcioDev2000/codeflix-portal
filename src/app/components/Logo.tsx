@@ -4,5 +4,5 @@ import React from "react";
 
 /* ====== Componentes pequenos reutilizáveis ====== */
 export const Logo = () => (
-  <Image src="/logo.svg" alt="Codeflix Logo" width={120} height={40} />
+  <Image src="/logo.svg" className="mx-6" alt="Codeflix Logo" width={120} height={40} />
 );
