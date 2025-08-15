@@ -6,7 +6,7 @@ import { BannerHeader } from "./components/BannerHeader";
 
 export default function Home() {
   return (
-    <div className="relative h-screen overflow-hidden bg-gradient-to-b lg:h-[200vh]">
+    <div className="relative min-h-screen overflow-hidden bg-gradient-to-b">
       <Header />
       <main className="relative pb-24  lg:pl-16">
       <BannerHeader />
@@ -16,4 +16,4 @@ export default function Home() {
     </div>
   );
 
-}
+}               
