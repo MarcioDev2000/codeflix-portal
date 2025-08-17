@@ -8,6 +8,7 @@ import { useScroll } from "../hooks/useScroll";
 
 export default function Header() {
   const isScrolled = useScroll();
+  
 
   return (
     <header
