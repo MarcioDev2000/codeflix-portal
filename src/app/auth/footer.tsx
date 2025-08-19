@@ -9,7 +9,8 @@ export default function Footer() {
           <input
             type="checkbox"
             className="h-4 w-4 rounded accent-red-600"
-          />
+          /> 
+          
           <span>Remember me</span>
         </label>
 

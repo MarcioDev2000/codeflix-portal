@@ -13,4 +13,4 @@ export type Movie = {
 };
 
 // Lista de filmes
-export type MovieList = Movie[];
+export type Movies = Movie[];
