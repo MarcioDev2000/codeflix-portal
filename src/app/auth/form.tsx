@@ -7,6 +7,9 @@ type Field = {
   id: string;
   type: string;
   label: string;
+  value: string;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  error?: string;
 };
 
 type FormProps = {
@@ -39,7 +42,13 @@ export const Form: React.FC<FormProps> = ({
      
       <div className="flex flex-col space-y-4">
         {fields.map((field) => (
-          <InputField key={field.id} id={field.id} type={field.type} label={field.label} />
+          <InputField   key={field.id}
+    id={field.id}
+    type={field.type}
+    label={field.label}
+    value={field.value}
+    onChange={field.onChange}
+    error={field.error} />
         ))}
       </div>
 
