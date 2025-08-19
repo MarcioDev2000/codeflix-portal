@@ -13,7 +13,7 @@ export default function Footer() {
           <span>Remember me</span>
         </label>
 
-        <Link href="#" className="hover:underline">
+        <Link href="/auth/forgot-password" className="hover:underline">
           Forgot password?
         </Link>
       </div>

@@ -22,7 +22,7 @@ export const InputField: React.FC<InputFieldProps> = ({
     const newValue = e.target.value;
     setValue(newValue);
 
-    // validação para password
+   
     if (type === 'password') {
       if (newValue.length === 0) {
         setError('Your password must contain between 4 and 60 characters.');
@@ -33,7 +33,7 @@ export const InputField: React.FC<InputFieldProps> = ({
       }
     }
 
-    // validação para email ou telefone
+   
     if (type === 'email') {
       const isEmail = /\S+@\S+\.\S+/.test(newValue);
       const isPhone = /^[0-9]{9,}$/.test(newValue);
@@ -79,7 +79,7 @@ export const InputField: React.FC<InputFieldProps> = ({
         </label>
       </div>
 
-      {/* Mensagem de erro abaixo do input */}
+      
        {error && (
         <p className="mt-1 flex items-center text-sm text-[rgb(229,62,62)]">
           <XCircleIcon className="h-4 w-4 mr-1" />

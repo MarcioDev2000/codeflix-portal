@@ -33,17 +33,17 @@ export const Form: React.FC<FormProps> = ({
       onSubmit={handleSubmit}
       className="flex w-full max-w-md flex-col space-y-6 rounded bg-[#040404dc] bg-opacity-80 px-10 py-12 shadow-lg "
     >
-      {/* Título */}
+    
       <h1 className="text-3xl font-bold">{title}</h1>
 
-      {/* Campos dinâmicos */}
+     
       <div className="flex flex-col space-y-4">
         {fields.map((field) => (
           <InputField key={field.id} id={field.id} type={field.type} label={field.label} />
         ))}
       </div>
 
-      {/* Botão principal */}
+     
       <button
         className="flex w-full items-center justify-center rounded bg-red-600 px-6 py-3 text-lg font-semibold text-white hover:bg-red-700"
         type="submit"
@@ -51,7 +51,7 @@ export const Form: React.FC<FormProps> = ({
         {submitText}
       </button>
 
-      {/* Botão alternativo */}
+     
       {altButtonText && (
         <>
           <p className="flex items-center justify-center">OR</p>
@@ -65,7 +65,6 @@ export const Form: React.FC<FormProps> = ({
         </>
       )}
 
-      {/* Footer dinâmico */}
       {footer}
     </form>
   );

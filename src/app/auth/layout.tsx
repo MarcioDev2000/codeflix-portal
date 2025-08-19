@@ -9,7 +9,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         md:bg-[url('/background.jpg')] md:bg-cover md:bg-center md:bg-no-repeat md:opacity-80
       "
     >
-      {/* Logo */}
+ 
       <div
   className="
     pt-1 px-4 flex justify-center
@@ -19,7 +19,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   <Logo className="w-40 h-40 sm:w-20 sm:h-20 md:w-40 md:h-40" />
 </div>
 
-      {/* Conteúdo */}
+   
       <div className="flex flex-col items-center justify-center
     py-2
     sm:py-0
