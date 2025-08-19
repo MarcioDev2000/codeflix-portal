@@ -31,7 +31,7 @@ export const Form: React.FC<FormProps> = ({
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex w-full max-w-md flex-col space-y-6 rounded bg-[#040404e4] bg-opacity-80 px-10 py-12 shadow-lg"
+      className="flex w-full max-w-md flex-col space-y-6 rounded bg-[#040404dc] bg-opacity-80 px-10 py-12 shadow-lg "
     >
       {/* Título */}
       <h1 className="text-3xl font-bold">{title}</h1>

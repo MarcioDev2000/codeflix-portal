@@ -2,7 +2,22 @@
 import Image from "next/image";
 import React from "react";
 
-/* ====== Componentes pequenos reutilizáveis ====== */
-export const Logo = () => (
-  <Image src="/logo.svg" className="mx-6" alt="Codeflix Logo" width={120} height={40} />
-);
+
+type LogoProps = {
+  className?: string;
+  width?: number;
+  height?: number;
+};
+
+export function Logo({ className = '', width = 128, height = 48 }: LogoProps) {
+  return (
+    <Image
+      src="/logo.svg"   
+      alt="Logo"
+      width={width}     
+      height={height}   
+      className={className}
+      priority         
+    />
+  );
+}
