@@ -1,8 +1,8 @@
-'use client';
-import { Form } from '../form';
-import Footer from '../footer'; 
-import { z } from 'zod';
-import React, { useState } from 'react';
+"use client";
+import { Form } from "../form";
+import Footer from "../footer";
+import { z } from "zod";
+import React, { useState } from "react";
 
 const loginSchema = z.object({
   email: z
@@ -15,10 +15,11 @@ const loginSchema = z.object({
     .max(60, { message: "Your password must be between 4 and 60 characters." }),
 });
 
-
 export default function LoginForm() {
-  const [values, setValues] = useState({ email: '', password: '' });
-  const [errors, setErrors] = useState<{ email?: string; password?: string }>({});
+  const [values, setValues] = useState({ email: "", password: "" });
+  const [errors, setErrors] = useState<{ email?: string; password?: string }>(
+    {}
+  );
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -36,14 +37,14 @@ export default function LoginForm() {
     if (!result.success) {
       const formattedErrors: { email?: string; password?: string } = {};
       result.error.issues.forEach((issue) => {
-        const field = issue.path[0] as 'email' | 'password';
+        const field = issue.path[0] as "email" | "password";
         formattedErrors[field] = issue.message;
       });
       setErrors(formattedErrors);
       return;
     }
 
-    console.log('Login form submitted ✅', result.data);
+    console.log("Login form submitted", result.data);
     setErrors({});
   };
 

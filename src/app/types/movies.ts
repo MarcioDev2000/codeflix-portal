@@ -4,7 +4,7 @@ export type Movie = {
   description: string;
   yearLaunched: number;
   link: string;
-  rating: number;
+  rating: string;
   castMembers: string[];
   genres: string[];
   thumbFileURL: string;
